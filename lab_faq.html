@@ -32,6 +32,10 @@ to handle an unrecoverable error.
 
 <li>Avoid memory errors and leaks, egregious performance issues (e.g. allocating large amounts of memory for no reason) or unnecessarily complex approaches (e.g. a complicated data structure that is only marginally more efficient than something much simpler, or something available in the C++ standard library).
 
+<li>In the writeup, we really want to see that you have judiciously considered
+  the available implementation strategies (e.g., choice of data structures) and
+  can justify the choice you made.
+  
 <li>Before submitting each assignment, please run <code>cmake --build build --target format</code> (to standardize the formatting), and make sure to remove any dummy code or comments that were included with the starter code.
 
 <li>Also (optionally) run <code>cmake --build build --target tidy</code> to receive suggestions for improvements related to C++ programming practices.
@@ -43,7 +47,8 @@ Your style grade may also include components of functionality not covered by the
         <p><code>ctest -R '^test_name$'</code></p>
 
         <li><b>Can I add include lines in the header files?</b></li>
-        <p>Sure.</p>
+        <p>Sure, but please don't change the public interface of any
+	of the classes.</p>
 
         <li><b>How do I use <code>git</code>?</b></li>
 
@@ -92,7 +97,7 @@ Your style grade may also include components of functionality not covered by the
 
 	<li><b>How fast should my code be?</b></li>
 
-	  Here's a reasonable rule of thumb: if any of your tests are
+	  Here's a reasonable rule: if any of your tests are
 	  taking longer than 2 seconds, it's probably good to keep
 	exploring other ways of representing the ByteStream.
 	And if your benchmark results at the end of the test are worse
